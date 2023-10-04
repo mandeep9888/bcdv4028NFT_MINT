@@ -12,5 +12,3 @@ npx hardhat run scripts/sample-script.js --network localhost
 # terminal 3
 npm run dev
 ```
-
-## Screenshots
