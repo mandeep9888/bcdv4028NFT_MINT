@@ -2,7 +2,9 @@
 import { useEffect, useState } from "react";
 
 import { ethers } from "ethers";
-import FiredGuys from "../artifacts/contracts/MyNFT.sol/FiredGuys.json";
+import AlphaApes from "../artifacts/contracts/MyNFT.sol/AlphaApes.json";
+
+// const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
 const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
@@ -12,7 +14,7 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 const signer = provider.getSigner();
 
 // get the smart contract
-const contract = new ethers.Contract(contractAddress, FiredGuys.abi, signer);
+const contract = new ethers.Contract(contractAddress, AlphaApes.abi, signer);
 
 function Home() {
   const [totalMinted, setTotalMinted] = useState(0);
@@ -30,7 +32,7 @@ function Home() {
     <div>
       {/* <WalletBalance /> */}
 
-      <h1>Fired Guys NFT Collection</h1>
+      <h1>AlphaApes NFT Collection</h1>
       <div className="container">
         <div className="row">
           {Array(totalMinted + 1)
